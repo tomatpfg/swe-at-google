@@ -18,8 +18,7 @@
 代码审查可以发生在软件开发的许多阶段。在谷歌，在将更改提交到代码库之前进行代码审查;这个阶段也称为预提交评审。代码审查的主要最终目标是让另一名工程师同意更改，我们将更改标记为“对我来说很好”(LGTM)。我们使用这个LGTM作为必要的权限“位”(与下面提到的其他位相结合)来允许提交更改。
 
 在谷歌，一个典型的代码审查要经过以下步骤:
-1. 用户将更改写入工作区中的代码库。然后，作者创建更改的快照:补丁和相应的描述
-上传至代码审查工具。此更改针对代码库生成一个di，用于评估哪些代码已更改。
+1. 用户将更改写入其工作区中的代码库。 然后，作者创建了更改的快照：上传到代码审查工具的补丁和相应的描述。 此更改会与代码库产生差异，用于评估更改了哪些代码。
 2. 作者可以使用这个初始补丁来应用自动评审注释或进行自我评审。当作者对变更的差异感到满意时，他们会发送
 更改为一个或多个审阅者。这个过程通知那些审阅者，要求他们查看并评论快照。
 3.审查员在代码审查工具中打开变更并对差异发表评论，有些评论要求明确的解决方案。有些仅仅是信息。
@@ -484,14 +483,16 @@ mary tool of a typical software engineer at Google.
 
 [^2]:Steve McConnell, Code Complete (Redmond: Microsoft Press, 2004). 
 
-[^3]:At Google, “readability” does not refer simply to comprehension, but to the set of styles and best practices that allow code to be maintainable to other engineers. See Chapter 3.
-[^4]:Some changes to documentation and configurations might not require a code review, but it is often still pref‐
-erable to obtain such a review.
+[^3]:At Google, “readability” does not refer simply to comprehension, but to the set of styles and best practices that allow code to be maintainable to other engineers. See Chapter 3. 
+
+[^4]:Some changes to documentation and configurations might not require a code review, but it is often still pref‐erable to obtain such a review.
+
 [^5]:“Advances in Software Inspection,” IEEE Transactions on Soware Engineering, SE-12(7): 744–751, July 1986.
 Granted, this study took place before robust tooling and automated testing had become so important in the
 software development process, but the results still seem relevant in the modern software age.
-[^6]:Rigby, Peter C. and Christian Bird. 2013. “Convergent software peer review practices.” ESEC/FSE 2013: Pro‐
-ceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering, August 2013: 202-212.[https://dl.acm.org/doi/10.1145/2491411.2491444](https://dl.acm.org/doi/10.1145/2491411.2491444).
+
+[^6]:Rigby, Peter C. and Christian Bird. 2013. “Convergent software peer review practices.” ESEC/FSE 2013: Pro‐ceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering, August 2013: 202-212.[https://dl.acm.org/doi/10.1145/2491411.2491444](https://dl.acm.org/doi/10.1145/2491411.2491444).
+
 [^7]:Caitlin Sadowski, Emma Söderberg, Luke Church, Michal Sipko, and Alberto Bacchelli, “[Modern code review: a case study at Google.](https://oreil.ly/m7FnJ)”
 
 [^8]:Ibid
