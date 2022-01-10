@@ -71,5 +71,8 @@
 * [第三部分](Part_III_Processes/README.md)
   * [8. 风格指南和规则](Part_III_Processes/Chapter-8.md)
   * [9. 代码审查](Part_III_Processes/Chapter-9.md)
+  * [10. 文档](Part_III_Processes/Chapter-10.md)
+  * [11. 测试 Testing overview](Part_III_Processes/Chapter-11-0.md)
+    * [为什么我们需要编写测试](Part_III_Processes/Chapter-11-1_why.md)
 * [第四部分](di-si-bu-fen.md)
 * [第五部分](di-wu-bu-fen.md)
