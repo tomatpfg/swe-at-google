@@ -186,64 +186,69 @@ In summary, a healthy automated testing culture encourages everyone to share the
 </div></details>
 总之，健康的自动化测试文化鼓励每个人分享编写测试的工作。这种文化还确保定期运行测试。最后，也许也是最重要的一点，它强调快速修复损坏的测试，以保持对该过程的高度信心。
 
-### Benefits of Testing Code
+### 测试代码的好处Benefits of Testing Code
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 To developers coming from organizations that don’t have a strong testing culture, the idea of writing tests as a means of improving productivity and velocity might seem antithetical. After all, the act of writing tests can take just as long (if not longer!) than implementing a feature would take in the first place. On the contrary, at Google, we’ve found that investing in software tests provides several key benefits to developer productivity:
 </div></details>
-
 对于来自没有强大测试文化的组织的开发人员来说，编写测试作为一种提高生产力和速度的方法的想法似乎是对立的。毕竟，编写测试所花费的时间可能和实现特性所花费的时间一样长(如果不是更长的话!)。相反，在Google，我们发现在软件测试上的投资为开发人员的生产力提供了几个关键的好处:
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 
-
 *Less debugging*
-
 As you would expect, tested code has fewer defects when it is submitted. Critically, it also has fewer defects throughout its existence; most of them will be caught before the code is submitted. A piece of code at Google is expected to be modified dozens of times in its lifetime. It will be changed by other teams and even automated code maintenance systems. A test written once continues to pay dividends and prevent costly defects and annoying debugging sessions through the lifetime of the project. Changes to a project, or the dependencies of a project, that break a test can be quickly detected by test infrastructure and rolled back before the problem is ever released to production.
-
-*Increased confidence in changes*
-
-All software changes. Teams with good tests can review and accept changes to their project with confidence because all important behaviors of their project are continuously verified. Such projects encourage refactoring. Changes that refactor code while preserving existing behavior should (ideally) require no changes to existing tests.
-
-*Improved documentation*
-
-Software documentation is notoriously unreliable. From outdated requirements to missing edge cases, it is common for documentation to have a tenuous relationship to the code. Clear, focused tests that exercise one behavior at a time function as executable documentation. If you want to know what the code does in a particular case, look at the test for that case. Even better, when requirements change and new code breaks an existing test, we get a clear signal that the “documentation” is now out of date. Note that tests work best as documentation only if care is taken to keep them clear and concise.
-
-*Simpler reviews*
-
-All code at Google is reviewed by at least one other engineer before it can be submitted (see Chapter 9 for more details). A code reviewer spends less effort verifying code works as expected if the code review includes thorough tests that demonstrate code correctness, edge cases, and error conditions. Instead of the tedious effort needed to mentally walk each case through the code, the reviewer can verify that each case has a passing test. 
-
-*Thoughtful design 
-
-Writing tests for new code is a practical means of exercising the API design of the code itself. If new code is difficult to test, it is often because the code being tested has too many responsibilities or difficult-to-manage dependencies. Welldesigned code should be modular, avoiding tight coupling and focusing on specific responsibilities. Fixing design issues early often means less rework later. 
-
-*Fast, high-quality releases *
-
-With a healthy automated test suite, teams can release new versions of their application with confidence. Many projects at Google release a new version to production every day—even large projects with hundreds of engineers and thousands of code changes submitted every day. This would not be possible without automated testing.
 
 </div></details>
 
 *更少的调试*
-
 正如您所期望的那样，经过测试的代码在提交时缺陷更少。关键的是，它在整个存在过程中也有较少的缺陷;它们中的大多数将在代码提交之前被捕获。Google的一段代码在其生命周期中预计会被修改数十次。它将由其他团队甚至自动化代码维护系统进行更改。在项目的整个生命周期中，编写一次的测试将继续带来好处，并防止代价高昂的缺陷和恼人的调试会话。对项目或项目依赖项的更改会破坏测试，测试基础设施可以快速检测到这些更改，并在问题发布到生产环境之前进行回滚。
 
-*增加了对变更的信心*
+<details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 
+*Increased confidence in changes*
+All software changes. Teams with good tests can review and accept changes to their project with confidence because all important behaviors of their project are continuously verified. Such projects encourage refactoring. Changes that refactor code while preserving existing behavior should (ideally) require no changes to existing tests.
+</div></details>
+
+*增加了对变更的信心*
 所有的软件更改。拥有良好测试的团队可以满怀信心地审查和接受对项目的更改，因为项目的所有重要行为都得到了持续的验证。这样的项目鼓励重构。在保留现有行为的同时重构代码的更改(理想情况下)应该不需要更改现有的测试。
 
-*改进的文档*
 
+<details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+
+*Improved documentation*
+Software documentation is notoriously unreliable. From outdated requirements to missing edge cases, it is common for documentation to have a tenuous relationship to the code. Clear, focused tests that exercise one behavior at a time function as executable documentation. If you want to know what the code does in a particular case, look at the test for that case. Even better, when requirements change and new code breaks an existing test, we get a clear signal that the “documentation” is now out of date. Note that tests work best as documentation only if care is taken to keep them clear and concise.
+</div></details>
+
+*改进的文档*
 众所周知，软件文档是不可靠的。从过时的需求到缺失的边缘用例，文档与代码之间的关系通常很脆弱。一次执行一个行为的清晰、集中的测试可以作为可执行文档。如果您想知道代码在特定情况下做什么，请查看该情况的测试。更棒的是，当需求变更和新代码破坏了现有的测试时，我们会得到一个明确的信号，即“文档”现在已经过时了。请注意，只有注意保持测试的清晰和简洁，测试才能作为文档工作得最好。
 
-*简单的评论*
 
+<details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+
+*Simpler reviews*
+All code at Google is reviewed by at least one other engineer before it can be submitted (see Chapter 9 for more details). A code reviewer spends less effort verifying code works as expected if the code review includes thorough tests that demonstrate code correctness, edge cases, and error conditions. Instead of the tedious effort needed to mentally walk each case through the code, the reviewer can verify that each case has a passing test. 
+</div></details>
+
+*简单的评论*
 所有在Google的代码在提交之前，至少要经过另一名工程师的审核(详情请参阅第9章)。如果代码评审包括演示代码正确性、边缘情况和错误条件的完整测试，那么代码评审人员在验证代码是否按预期工作时所花的精力就会更少。审查员可以验证每个用例都有一个通过的测试，而不是需要在心里对每个用例进行冗长乏味的工作。
 
-*深思熟虑的设计*
 
+<details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+
+*Thoughtful design*
+Writing tests for new code is a practical means of exercising the API design of the code itself. If new code is difficult to test, it is often because the code being tested has too many responsibilities or difficult-to-manage dependencies. Welldesigned code should be modular, avoiding tight coupling and focusing on specific responsibilities. Fixing design issues early often means less rework later. 
+</div></details>
+
+*深思熟虑的设计*
 为新代码编写测试是实践代码本身API设计的一种实际方法。如果新代码难以测试，通常是因为被测试的代码有太多的职责或难以管理的依赖项。设计良好的代码应该是模块化的，避免紧密耦合，专注于特定的职责。尽早解决设计问题通常意味着更少的返工。
 
-*快速、高质量的发布*
+<details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 
+*Fast, high-quality releases*
+With a healthy automated test suite, teams can release new versions of their application with confidence. Many projects at Google release a new version to production every day—even large projects with hundreds of engineers and thousands of code changes submitted every day. This would not be possible without automated testing.
+
+</div></details>
+
+*快速、高质量的发布*
 有了一个健康的自动化测试套件，团队可以满怀信心地发布他们应用程序的新版本。Google的许多项目每天都会发布一个新版本，即使是大型项目，每天都有数百名工程师和数千个代码更改提交。如果没有自动化测试，这是不可能的。
 
 ## 设计测试套件 Designing a Test Suite
