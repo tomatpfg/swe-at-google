@@ -25,7 +25,7 @@ Overall, the state of engineering documentation in the late 2010s is similar to 
 
 总的来说，2010年代后期的工程文档状态类似于1980年代后期的软件测试状态。每个人都认识到需要做出更多的努力来改进它，但是组织还没有认识到它的关键好处。这种情况正在改变，尽管速度缓慢。在谷歌，我们最成功的努力是将文档视为代码，并将其整合到传统的工程工作流程中，使工程师更容易编写和维护简单的文档。
 
-## 什么是文档？（What Qualifies as Documentation?）
+## 怎么样才算是文档？（What Qualifies as Documentation?）
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 When we refer to “documentation,” we’re talking about every supplemental text that an engineer needs to write to do their job: not only standalone documents, but code comments as well. (In fact, most of the documentation an engineer at Google writes comes in the form of code comments.) We’ll discuss the various types of engineering documents further in this chapter.
