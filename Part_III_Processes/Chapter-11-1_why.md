@@ -86,11 +86,11 @@ Software systems are growing larger and ever more complex. A typical application
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 The ability for humans to manually validate every behavior in a system has been unable to keep pace with the explosion of features and platforms in most software. Imagine what it would take to manually test all of the functionality of Google Search, like finding flights, movie times, relevant images, and of course web search results (see Figure 11-1). Even if you can determine how to solve that problem, you then need to multiply that workload by every language, country, and device Google Search must support, and don’t forget to check for things like accessibility and security. Attempting to assess product quality by asking humans to manually interact with every feature just doesn’t scale. When it comes to testing, there is one clear answer: automation
-
 </div></details>
+
 人类手动验证系统中每个行为的能力已经无法跟上大多数软件中功能和平台的爆炸式增长。想象一下手动测试 Google 搜索的所有功能需要什么，比如查找航班、电影时间、相关图像，当然还有网络搜索结果（见图 11-1）。即使您可以确定如何解决该问题，您也需要将工作量乘以 Google 搜索必须支持的每种语言、国家和设备，并且不要忘记检查可访问性和安全性等内容。试图通过要求人类手动与每个功能交互来评估产品质量是无法扩展的。谈到测试，有一个明确的答案：自动化
 
-<img src='./pic/fingure-11.1.png'>
+<img src='./pic/fingure-11.1.png' style='width:100%'>
 
 ### Write, Run, React
 
@@ -158,7 +158,9 @@ To developers coming from organizations that don’t have a strong testing cultu
 </div></details>
 
 对于来自没有强大测试文化的组织的开发人员来说，编写测试作为一种提高生产力和速度的方法的想法似乎是对立的。毕竟，编写测试所花费的时间可能和实现特性所花费的时间一样长(如果不是更长的话!)。相反，在谷歌，我们发现在软件测试上的投资为开发人员的生产力提供了几个关键的好处:
+
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+
 
 *Less debugging*
 
@@ -184,8 +186,8 @@ Writing tests for new code is a practical means of exercising the API design of 
 
 With a healthy automated test suite, teams can release new versions of their application with confidence. Many projects at Google release a new version to production every day—even large projects with hundreds of engineers and thousands of code changes submitted every day. This would not be possible without automated testing.
 
-
 </div></details>
+
 *更少的调试*
 
 正如您所期望的那样，经过测试的代码在提交时缺陷更少。关键的是，它在整个存在过程中也有较少的缺陷;它们中的大多数将在代码提交之前被捕获。谷歌的一段代码在其生命周期中预计会被修改数十次。它将由其他团队甚至自动化代码维护系统进行更改。在项目的整个生命周期中，编写一次的测试将继续带来好处，并防止代价高昂的缺陷和恼人的调试会话。对项目或项目依赖项的更改会破坏测试，测试基础设施可以快速检测到这些更改，并在问题发布到生产环境之前进行回滚。
@@ -209,6 +211,8 @@ With a healthy automated test suite, teams can release new versions of their app
 *快速、高质量的发布*
 
 有了一个健康的自动化测试套件，团队可以满怀信心地发布他们应用程序的新版本。谷歌的许多项目每天都会发布一个新版本，即使是大型项目，每天都有数百名工程师和数千个代码更改提交。如果没有自动化测试，这是不可能的。
+
+
 
 
 
