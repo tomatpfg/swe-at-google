@@ -45,7 +45,7 @@ At Google, we have determined that testing cannot be an afterthought. Focusing o
 In Google’s early days, engineer-driven testing was often assumed to be of little importance. Teams regularly relied on smart people to get the software right. A few systems ran large integration tests, but mostly it was the Wild West. One product in particular seemed to suffer the worst: it was called the Google Web Server, also known as GWS.
 </div></details>
 
-在谷歌的早期，工程师驱动的测试通常被认为并不重要。团队经常依靠聪明的人来获得正确的软件。一些系统运行了大型集成测试，但主要是狂野西部。尤其是一种产品似乎遭受了最严重的损失：它被称为 Google Web Server，也称为 GWS。
+在Google的早期，工程师驱动的测试通常被认为并不重要。团队经常依靠聪明的人来获得正确的软件。一些系统运行了大型集成测试，但主要是狂野西部。尤其是一种产品似乎遭受了最严重的损失：它被称为 Google Web Server，也称为 GWS。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 GWS is the web server responsible for serving Google Search queries and is as important to Google Search as air traffic control is to an airport. Back in 2005, as the project swelled in size and complexity, productivity had slowed dramatically. Releases were becoming buggier, and it was taking longer and longer to push them out. Team members had little confidence when making changes to the service, and often found out something was wrong only when features stopped working in production. (At one point, more than 80% of production pushes contained user-affecting bugs that had to be rolled back.)
@@ -63,7 +63,7 @@ To address these problems, the tech lead (TL) of GWS decided to institute a poli
 The changes in GWS marked a watershed for testing culture at Google as teams in other parts of the company saw the benefits of testing and moved to adopt similar tactics.
 </div></details>
 
-GWS 的变化标志着谷歌测试文化的一个分水岭，因为公司其他部门的团队看到了测试的好处，并采取了类似的策略。
+GWS 的变化标志着Google测试文化的一个分水岭，因为公司其他部门的团队看到了测试的好处，并采取了类似的策略。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 One of the key insights the GWS experience taught us was that you can’t rely on programmer ability alone to avoid product defects. Even if each engineer writes only the occasional bug, after you have enough people working on the same project, you will be swamped by the ever-growing list of defects. Imagine a hypothetical 100-person team whose engineers are so good that they each write only a single bug a month. Collectively, this group of amazing engineers still produces five new bugs every workday. Worse yet, in a complex system, fixing one bug can often cause another, as engineers adapt to known bugs and code around them.
@@ -157,7 +157,7 @@ In summary, a healthy automated testing culture encourages everyone to share the
 To developers coming from organizations that don’t have a strong testing culture, the idea of writing tests as a means of improving productivity and velocity might seem antithetical. After all, the act of writing tests can take just as long (if not longer!) than implementing a feature would take in the first place. On the contrary, at Google, we’ve found that investing in software tests provides several key benefits to developer productivity:
 </div></details>
 
-对于来自没有强大测试文化的组织的开发人员来说，编写测试作为一种提高生产力和速度的方法的想法似乎是对立的。毕竟，编写测试所花费的时间可能和实现特性所花费的时间一样长(如果不是更长的话!)。相反，在谷歌，我们发现在软件测试上的投资为开发人员的生产力提供了几个关键的好处:
+对于来自没有强大测试文化的组织的开发人员来说，编写测试作为一种提高生产力和速度的方法的想法似乎是对立的。毕竟，编写测试所花费的时间可能和实现特性所花费的时间一样长(如果不是更长的话!)。相反，在Google，我们发现在软件测试上的投资为开发人员的生产力提供了几个关键的好处:
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 
@@ -190,7 +190,7 @@ With a healthy automated test suite, teams can release new versions of their app
 
 *更少的调试*
 
-正如您所期望的那样，经过测试的代码在提交时缺陷更少。关键的是，它在整个存在过程中也有较少的缺陷;它们中的大多数将在代码提交之前被捕获。谷歌的一段代码在其生命周期中预计会被修改数十次。它将由其他团队甚至自动化代码维护系统进行更改。在项目的整个生命周期中，编写一次的测试将继续带来好处，并防止代价高昂的缺陷和恼人的调试会话。对项目或项目依赖项的更改会破坏测试，测试基础设施可以快速检测到这些更改，并在问题发布到生产环境之前进行回滚。
+正如您所期望的那样，经过测试的代码在提交时缺陷更少。关键的是，它在整个存在过程中也有较少的缺陷;它们中的大多数将在代码提交之前被捕获。Google的一段代码在其生命周期中预计会被修改数十次。它将由其他团队甚至自动化代码维护系统进行更改。在项目的整个生命周期中，编写一次的测试将继续带来好处，并防止代价高昂的缺陷和恼人的调试会话。对项目或项目依赖项的更改会破坏测试，测试基础设施可以快速检测到这些更改，并在问题发布到生产环境之前进行回滚。
 
 *增加了对变更的信心*
 
@@ -202,7 +202,7 @@ With a healthy automated test suite, teams can release new versions of their app
 
 *简单的评论*
 
-所有在谷歌的代码在提交之前，至少要经过另一名工程师的审核(详情请参阅第9章)。如果代码评审包括演示代码正确性、边缘情况和错误条件的完整测试，那么代码评审人员在验证代码是否按预期工作时所花的精力就会更少。审查员可以验证每个用例都有一个通过的测试，而不是需要在心里对每个用例进行冗长乏味的工作。
+所有在Google的代码在提交之前，至少要经过另一名工程师的审核(详情请参阅第9章)。如果代码评审包括演示代码正确性、边缘情况和错误条件的完整测试，那么代码评审人员在验证代码是否按预期工作时所花的精力就会更少。审查员可以验证每个用例都有一个通过的测试，而不是需要在心里对每个用例进行冗长乏味的工作。
 
 *深思熟虑的设计*
 
@@ -210,7 +210,7 @@ With a healthy automated test suite, teams can release new versions of their app
 
 *快速、高质量的发布*
 
-有了一个健康的自动化测试套件，团队可以满怀信心地发布他们应用程序的新版本。谷歌的许多项目每天都会发布一个新版本，即使是大型项目，每天都有数百名工程师和数千个代码更改提交。如果没有自动化测试，这是不可能的。
+有了一个健康的自动化测试套件，团队可以满怀信心地发布他们应用程序的新版本。Google的许多项目每天都会发布一个新版本，即使是大型项目，每天都有数百名工程师和数千个代码更改提交。如果没有自动化测试，这是不可能的。
 
 
 

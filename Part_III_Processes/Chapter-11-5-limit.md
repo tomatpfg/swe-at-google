@@ -9,7 +9,7 @@ Automated testing is not suitable for all testing tasks. For example, testing th
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 In addition to qualitative judgements, there are certain creative assessments at which humans excel. For example, searching for complex security vulnerabilities is something that humans do better than automated systems. After a human has discovered and understood a flaw, it can be added to an automated security testing system like Google’s Cloud Security Scanner where it can be run continuously and at scale.
 </div></details>
-除了定性判断之外，人类还擅长某些创造性的评估。例如，搜索复杂的安全漏洞是人类比自动化系统做得更好的事情。当人们发现并理解了一个缺陷后，就可以将其添加到自动安全测试系统中，比如谷歌的云安全扫描仪(Cloud security Scanner)，该系统可以连续且大规模地运行。
+除了定性判断之外，人类还擅长某些创造性的评估。例如，搜索复杂的安全漏洞是人类比自动化系统做得更好的事情。当人们发现并理解了一个缺陷后，就可以将其添加到自动安全测试系统中，比如Google的云安全扫描仪(Cloud security Scanner)，该系统可以连续且大规模地运行。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 A more generalized term for this technique is Exploratory Testing. Exploratory Testing is a fundamentally creative endeavor in which someone treats the application under test as a puzzle to be broken, maybe by executing an unexpected set of steps or by inserting unexpected data. When conducting an exploratory test, the specific problems to be found are unknown at the start. They are gradually uncovered by probing commonly overlooked code paths or unusual responses from the application. As with the detection of security vulnerabilities, as soon as an exploratory test discovers an issue, an automated test should be added to prevent future regressions.
@@ -29,14 +29,14 @@ Using automated testing to cover well-understood behaviors enables the expensive
 The adoption of developer-driven automated testing has been one of the most transformational software engineering practices at Google. It has enabled us to build larger systems with larger teams, faster than we ever thought possible. It has helped us keep up with the increasing pace of technological change. Over the past 15 years, we have successfully transformed our engineering culture to elevate testing into a cultural norm. Despite the company growing by a factor of almost 100 times since the journey began, our commitment to quality and testing is stronger today than it has ever been.
 </div></details>
 
-采用开发人员驱动的自动化测试已经成为谷歌最具变革性的软件工程实践之一。它使我们能够用更大的团队构建更大的系统，速度比我们想象的要快。它帮助我们跟上技术变革的步伐。在过去的15年里，我们已经成功地将我们的工程文化转变为一种文化规范来提升测试。尽管公司自成立以来增长了近100倍，但我们对质量和测试的承诺比以往任何时候都更加坚定。
+采用开发人员驱动的自动化测试已经成为Google最具变革性的软件工程实践之一。它使我们能够用更大的团队构建更大的系统，速度比我们想象的要快。它帮助我们跟上技术变革的步伐。在过去的15年里，我们已经成功地将我们的工程文化转变为一种文化规范来提升测试。尽管公司自成立以来增长了近100倍，但我们对质量和测试的承诺比以往任何时候都更加坚定。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 This chapter has been written to help orient you to how Google thinks about testing. In the next few chapters, we are going to dive even deeper into some key topics that have helped shape our understanding of what it means to write good, stable, and reliable tests. We will discuss the what, why, and how of unit tests, the most common kind of test at Google. We will wade into the debate on how to effectively use test doubles in tests through techniques such as faking, stubbing, and interaction testing. Finally, we will discuss the challenges with testing larger and more complex systems, like many of those we have at Google.
 
 </div></details>
 
-本章的目的是帮助您了解谷歌如何看待测试。在接下来的几章中，我们将更深入地探讨一些关键的主题，这些主题帮助我们理解编写好的、稳定的和可靠的测试意味着什么。我们将讨论单元测试的内容、原因和方法，单元测试是谷歌中最常见的测试类型。我们将深入讨论如何通过诸如伪造、存根和交互测试等技术有效地在测试中使用测试替身。最后，我们将讨论测试更大、更复杂的系统所面临的挑战，就像我们在谷歌所遇到的许多系统一样。
+本章的目的是帮助您了解Google如何看待测试。在接下来的几章中，我们将更深入地探讨一些关键的主题，这些主题帮助我们理解编写好的、稳定的和可靠的测试意味着什么。我们将讨论单元测试的内容、原因和方法，单元测试是Google中最常见的测试类型。我们将深入讨论如何通过诸如伪造、存根和交互测试等技术有效地在测试中使用测试替身。最后，我们将讨论测试更大、更复杂的系统所面临的挑战，就像我们在Google所遇到的许多系统一样。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 At the conclusion of these three chapters, you should have a much deeper and clearer picture of the testing strategies we use and, more important, why we use them.

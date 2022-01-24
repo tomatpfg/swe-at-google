@@ -31,7 +31,7 @@ The act of writing tests also improves the design of your systems. As the first 
 
 Much ink has been spilled about the subject of testing software, and for good reason: for such an important practice, doing it well still seems to be a mysterious craft to many. At Google, while we have come a long way, we still face difficult problems getting our processes to scale reliably across the company. In this chapter, we’ll share what we have learned to help further the conversation.
 </div></details>
-关于软件测试这个话题已经有了很多的讨论，而且有充分的理由:对于这样一个重要的实践，做好它对许多人来说仍然是一件神秘的事情。在谷歌，虽然我们已经取得了很大的进展，但我们仍然面临着困难的问题，即如何让我们的流程在整个公司范围内可靠地扩展。在本章中，我们将分享我们所学到的知识，以帮助进一步对话。
+关于软件测试这个话题已经有了很多的讨论，而且有充分的理由:对于这样一个重要的实践，做好它对许多人来说仍然是一件神秘的事情。在Google，虽然我们已经取得了很大的进展，但我们仍然面临着困难的问题，即如何让我们的流程在整个公司范围内可靠地扩展。在本章中，我们将分享我们所学到的知识，以帮助进一步对话。
 
 
 [^1]:See “[Defect Prevention: Reducing Costs and Enhancing Quality.](https://oreil.ly/27R87)”

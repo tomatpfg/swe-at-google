@@ -51,7 +51,7 @@ Initially, the larger and more complex parts of our codebase appeared resistant 
 The program was organized into five levels, and each level required some concrete actions to improve the test hygiene on the team. The levels were designed in such a way that each step up could be accomplished within a quarter, which made it a convenient fit for Google’s internal planning cadence.
 </div></details>
 
-该计划被组织成五个级别，每个级别需要一些具体的行动来改善团队中的测试卫生。这些关卡的设计是这样的，每个步骤都可以在一个季度内完成，这使得它非常适合谷歌的内部规划节奏。
+该计划被组织成五个级别，每个级别需要一些具体的行动来改善团队中的测试卫生。这些关卡的设计是这样的，每个步骤都可以在一个季度内完成，这使得它非常适合Google的内部规划节奏。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Test Certified Level 1 covered the basics: set up a continuous build; start tracking code coverage; classify all your tests as small, medium, or large; identify (but don’t necessarily fix) flaky tests; and create a set of fast (not necessarily comprehensive) tests that can be run quickly. Each subsequent level added more challenges like “no releases with broken tests” or “remove all nondeterministic tests.” By Level 5, all tests were automated, fast tests were running before every commit, all nondeterminism had been removed, and every behavior was covered. An internal dashboard applied social pressure by showing the level of every team. It wasn’t long before teams were competing with one another to climb the ladder.
@@ -85,7 +85,7 @@ In April 2006, a short writeup covering how to improve testing in Python appeare
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Ultimately, the uproar subsided and TotT quickly became a staple of Google culture. To date, engineers from across the company have produced several hundred episodes, covering almost every aspect of testing imaginable (in addition to a variety of other technical topics). New episodes are eagerly anticipated and some engineers even volunteer to post the episodes around their own buildings. We intentionally limit each episode to exactly one page, challenging authors to focus on the most important and actionable advice. A good episode contains something an engineer can take back to the desk immediately and try.
 </div></details>
-最终，骚动平息了，TotT 迅速成为谷歌文化的主要内容。迄今为止，整个公司的工程师已经制作了数百集，几乎涵盖了可以想象的测试的各个方面（除了各种其他技术主题）。新剧集备受期待，一些工程师甚至自愿在他们自己的建筑物周围发布剧集。我们有意将每一集限制在一页，挑战作者专注于最重要和可操作的建议。一个好的情节包含工程师可以立即带回办公桌并尝试的东西。
+最终，骚动平息了，TotT 迅速成为Google文化的主要内容。迄今为止，整个公司的工程师已经制作了数百集，几乎涵盖了可以想象的测试的各个方面（除了各种其他技术主题）。新剧集备受期待，一些工程师甚至自愿在他们自己的建筑物周围发布剧集。我们有意将每一集限制在一页，挑战作者专注于最重要和可操作的建议。一个好的情节包含工程师可以立即带回办公桌并尝试的东西。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Ironically for a publication that appears in one of the more private locations, TotT has had an outsized public impact. Most external visitors see an episode at some point in their visit, and such encounters often lead to funny conversations about how Googlers always seem to be thinking about code. Additionally, TotT episodes make great blog posts, something the original TotT authors recognized early on. They began publishing lightly edited versions publicly, helping to share our experience with the industry at large.
@@ -127,7 +127,7 @@ Why didn’t we start by mandating the writing of tests?
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 The Testing Grouplet had considered asking for a testing mandate from senior leadership but quickly decided against it. Any mandate on how to develop code would be seriously counter to Google culture and likely slow the progress, independent of the idea being mandated. The belief was that successful ideas would spread, so the focus became demonstrating success.
 </div></details>
-测试小组曾考虑向高层领导提出测试任务，但很快就决定不这样做。任何关于如何开发代码的授权都将严重违背谷歌文化，并且可能会减缓进度，与授权的想法无关。人们相信成功的想法会传播开来，因此重点变成了展示成功。
+测试小组曾考虑向高层领导提出测试任务，但很快就决定不这样做。任何关于如何开发代码的授权都将严重违背Google文化，并且可能会减缓进度，与授权的想法无关。人们相信成功的想法会传播开来，因此重点变成了展示成功。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 If engineers were deciding to write tests on their own, it meant that they had fully accepted the idea and were likely to keep doing the right thing—even if no one was compelling them to.

@@ -31,7 +31,7 @@ The act of writing tests also improves the design of your systems. As the first 
 
 Much ink has been spilled about the subject of testing software, and for good reason: for such an important practice, doing it well still seems to be a mysterious craft to many. At Google, while we have come a long way, we still face difficult problems getting our processes to scale reliably across the company. In this chapter, we’ll share what we have learned to help further the conversation.
 </div></details>
-关于软件测试这个话题已经有了很多的讨论，而且有充分的理由:对于这样一个重要的实践，做好它对许多人来说仍然是一件神秘的事情。在谷歌，虽然我们已经取得了很大的进展，但我们仍然面临着困难的问题，即如何让我们的流程在整个公司范围内可靠地扩展。在本章中，我们将分享我们所学到的知识，以帮助进一步对话。
+关于软件测试这个话题已经有了很多的讨论，而且有充分的理由:对于这样一个重要的实践，做好它对许多人来说仍然是一件神秘的事情。在Google，虽然我们已经取得了很大的进展，但我们仍然面临着困难的问题，即如何让我们的流程在整个公司范围内可靠地扩展。在本章中，我们将分享我们所学到的知识，以帮助进一步对话。
 
 ## 为什么我们需要编写测试 Why Do We Write Tests?
 
@@ -79,7 +79,7 @@ At Google, we have determined that testing cannot be an afterthought. Focusing o
 In Google’s early days, engineer-driven testing was often assumed to be of little importance. Teams regularly relied on smart people to get the software right. A few systems ran large integration tests, but mostly it was the Wild West. One product in particular seemed to suffer the worst: it was called the Google Web Server, also known as GWS.
 </div></details>
 
-在谷歌的早期，工程师驱动的测试通常被认为并不重要。团队经常依靠聪明的人来获得正确的软件。一些系统运行了大型集成测试，但主要是狂野西部。尤其是一种产品似乎遭受了最严重的损失：它被称为 Google Web Server，也称为 GWS。
+在Google的早期，工程师驱动的测试通常被认为并不重要。团队经常依靠聪明的人来获得正确的软件。一些系统运行了大型集成测试，但主要是狂野西部。尤其是一种产品似乎遭受了最严重的损失：它被称为 Google Web Server，也称为 GWS。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 GWS is the web server responsible for serving Google Search queries and is as important to Google Search as air traffic control is to an airport. Back in 2005, as the project swelled in size and complexity, productivity had slowed dramatically. Releases were becoming buggier, and it was taking longer and longer to push them out. Team members had little confidence when making changes to the service, and often found out something was wrong only when features stopped working in production. (At one point, more than 80% of production pushes contained user-affecting bugs that had to be rolled back.)
@@ -97,7 +97,7 @@ To address these problems, the tech lead (TL) of GWS decided to institute a poli
 The changes in GWS marked a watershed for testing culture at Google as teams in other parts of the company saw the benefits of testing and moved to adopt similar tactics.
 </div></details>
 
-GWS 的变化标志着谷歌测试文化的一个分水岭，因为公司其他部门的团队看到了测试的好处，并采取了类似的策略。
+GWS 的变化标志着Google测试文化的一个分水岭，因为公司其他部门的团队看到了测试的好处，并采取了类似的策略。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 One of the key insights the GWS experience taught us was that you can’t rely on programmer ability alone to avoid product defects. Even if each engineer writes only the occasional bug, after you have enough people working on the same project, you will be swamped by the ever-growing list of defects. Imagine a hypothetical 100-person team whose engineers are so good that they each write only a single bug a month. Collectively, this group of amazing engineers still produces five new bugs every workday. Worse yet, in a complex system, fixing one bug can often cause another, as engineers adapt to known bugs and code around them.
@@ -191,7 +191,7 @@ In summary, a healthy automated testing culture encourages everyone to share the
 To developers coming from organizations that don’t have a strong testing culture, the idea of writing tests as a means of improving productivity and velocity might seem antithetical. After all, the act of writing tests can take just as long (if not longer!) than implementing a feature would take in the first place. On the contrary, at Google, we’ve found that investing in software tests provides several key benefits to developer productivity:
 </div></details>
 
-对于来自没有强大测试文化的组织的开发人员来说，编写测试作为一种提高生产力和速度的方法的想法似乎是对立的。毕竟，编写测试所花费的时间可能和实现特性所花费的时间一样长(如果不是更长的话!)。相反，在谷歌，我们发现在软件测试上的投资为开发人员的生产力提供了几个关键的好处:
+对于来自没有强大测试文化的组织的开发人员来说，编写测试作为一种提高生产力和速度的方法的想法似乎是对立的。毕竟，编写测试所花费的时间可能和实现特性所花费的时间一样长(如果不是更长的话!)。相反，在Google，我们发现在软件测试上的投资为开发人员的生产力提供了几个关键的好处:
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 
@@ -224,7 +224,7 @@ With a healthy automated test suite, teams can release new versions of their app
 
 *更少的调试*
 
-正如您所期望的那样，经过测试的代码在提交时缺陷更少。关键的是，它在整个存在过程中也有较少的缺陷;它们中的大多数将在代码提交之前被捕获。谷歌的一段代码在其生命周期中预计会被修改数十次。它将由其他团队甚至自动化代码维护系统进行更改。在项目的整个生命周期中，编写一次的测试将继续带来好处，并防止代价高昂的缺陷和恼人的调试会话。对项目或项目依赖项的更改会破坏测试，测试基础设施可以快速检测到这些更改，并在问题发布到生产环境之前进行回滚。
+正如您所期望的那样，经过测试的代码在提交时缺陷更少。关键的是，它在整个存在过程中也有较少的缺陷;它们中的大多数将在代码提交之前被捕获。Google的一段代码在其生命周期中预计会被修改数十次。它将由其他团队甚至自动化代码维护系统进行更改。在项目的整个生命周期中，编写一次的测试将继续带来好处，并防止代价高昂的缺陷和恼人的调试会话。对项目或项目依赖项的更改会破坏测试，测试基础设施可以快速检测到这些更改，并在问题发布到生产环境之前进行回滚。
 
 *增加了对变更的信心*
 
@@ -236,7 +236,7 @@ With a healthy automated test suite, teams can release new versions of their app
 
 *简单的评论*
 
-所有在谷歌的代码在提交之前，至少要经过另一名工程师的审核(详情请参阅第9章)。如果代码评审包括演示代码正确性、边缘情况和错误条件的完整测试，那么代码评审人员在验证代码是否按预期工作时所花的精力就会更少。审查员可以验证每个用例都有一个通过的测试，而不是需要在心里对每个用例进行冗长乏味的工作。
+所有在Google的代码在提交之前，至少要经过另一名工程师的审核(详情请参阅第9章)。如果代码评审包括演示代码正确性、边缘情况和错误条件的完整测试，那么代码评审人员在验证代码是否按预期工作时所花的精力就会更少。审查员可以验证每个用例都有一个通过的测试，而不是需要在心里对每个用例进行冗长乏味的工作。
 
 *深思熟虑的设计*
 
@@ -244,14 +244,14 @@ With a healthy automated test suite, teams can release new versions of their app
 
 *快速、高质量的发布*
 
-有了一个健康的自动化测试套件，团队可以满怀信心地发布他们应用程序的新版本。谷歌的许多项目每天都会发布一个新版本，即使是大型项目，每天都有数百名工程师和数千个代码更改提交。如果没有自动化测试，这是不可能的。
+有了一个健康的自动化测试套件，团队可以满怀信心地发布他们应用程序的新版本。Google的许多项目每天都会发布一个新版本，即使是大型项目，每天都有数百名工程师和数千个代码更改提交。如果没有自动化测试，这是不可能的。
 
 ## 设计测试套件 Designing a Test Suite
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Today, Google operates at a massive scale, but we haven’t always been so large, and the foundations of our approach were laid long ago. Over the years, as our codebase has grown, we have learned a lot about how to approach the design and execution of a test suite, often by making mistakes and cleaning up afterward.
 </div></details>
 
-今天，谷歌的运营规模很大，但我们并不总是那么大，我们的方法的基础很久以前就奠定了。多年来，随着我们代码库的增长，我们学到了很多关于如何设计和执行测试套件的知识，通常是通过犯错和事后清理。
+今天，Google的运营规模很大，但我们并不总是那么大，我们的方法的基础很久以前就奠定了。多年来，随着我们代码库的增长，我们学到了很多关于如何设计和执行测试套件的知识，通常是通过犯错和事后清理。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 One of the lessons we learned fairly early on is that engineers favored writing larger, system-scale tests, but that these tests were slower, less reliable, and more difficult to debug than smaller tests. Engineers, fed up with debugging the system-scale tests,asked themselves, “Why can’t we just test one server at a time?” or, “Why do we need to test a whole server at once? We could test smaller modules individually.” Eventually, the desire to reduce pain led teams to develop smaller and smaller tests, which turned out to be faster, more stable, and generally less painful.
@@ -272,7 +272,7 @@ At Google, we classify every one of our tests into a size and encourage engineer
 
 </div></details>
 
-在谷歌，我们对每个测试进行分类，并鼓励工程师总是为给定的功能块编写尽可能小的测试。一个测试的大小不是由它的代码行数决定的，而是由它如何运行、允许它做什么以及它消耗了多少资源决定的。事实上，在某些情况下，我们对小型、中型和大型的定义实际上被编码为测试基础结构可以在测试上强制执行的约束条件。我们稍后会详细介绍，简单地说，小型测试在单个流程中运行，中型测试在单个机器上运行，大型测试在任意位置运行，如图11-2所示。[^4]
+在Google，我们对每个测试进行分类，并鼓励工程师总是为给定的功能块编写尽可能小的测试。一个测试的大小不是由它的代码行数决定的，而是由它如何运行、允许它做什么以及它消耗了多少资源决定的。事实上，在某些情况下，我们对小型、中型和大型的定义实际上被编码为测试基础结构可以在测试上强制执行的约束条件。我们稍后会详细介绍，简单地说，小型测试在单个流程中运行，中型测试在单个机器上运行，大型测试在任意位置运行，如图11-2所示。[^4]
 
 <img src='./pic/fingure-11.2.png' width='100%'>
 
@@ -303,9 +303,9 @@ At Google, we encourage engineers to try to write small tests whenever possible,
 
 这些限制的目的是确保小型测试不能访问测试缓慢或不确定性的主要来源。如果测试运行在单个进程上，并且从不进行阻塞调用，那么它的运行速度可以达到CPU的处理速度。偶然地使这样的测试变慢或不确定是很困难的(但当然不是不可能)。对小型测试的限制提供了一个沙箱，防止工程师搬起石头砸自己的脚。
 
-这些限制一开始可能看起来有些过分，但是考虑一下一个由几百个小测试用例组成的适度的套件。如果其中的一些测试不确定地失败了(通常称为不稳定的测试)，那么跟踪原因就会严重影响生产效率。在谷歌的规模下，这样的问题可能会使我们的测试基础设施陷入停顿。
+这些限制一开始可能看起来有些过分，但是考虑一下一个由几百个小测试用例组成的适度的套件。如果其中的一些测试不确定地失败了(通常称为不稳定的测试)，那么跟踪原因就会严重影响生产效率。在Google的规模下，这样的问题可能会使我们的测试基础设施陷入停顿。
 
-在谷歌，我们鼓励工程师尽可能编写小的测试，不管测试的范围是什么，因为这样可以保持整个测试套件快速可靠地运行。关于小测试和单元测试的更多讨论，请参见第12章。
+在Google，我们鼓励工程师尽可能编写小的测试，不管测试的范围是什么，因为这样可以保持整个测试套件快速可靠地运行。关于小测试和单元测试的更多讨论，请参见第12章。
 
 #### Medium tests
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
@@ -334,7 +334,7 @@ Finally, we have large tests. Large tests remove the localhost restriction impos
 As before, increased flexibility comes with increased risk. Having to deal with a system that spans multiple machines and the network connecting them increases the chance of slowness and nondeterminism significantly compared to running on a single machine. We mostly reserve large tests for full-system end-to-end tests that are more about validating configuration than pieces of code, and for tests of legacy components for which it is impossible to use test doubles. We’ll talk more about use cases for large tests in Chapter 14. Teams at Google will frequently isolate their large tests from their small or medium tests, running them only during the build and release process so as not to impact developer workflow.
 </div></details>
 
-与前面一样，灵活性的提高伴随着风险的增加。与在一台机器上运行相比，必须处理一个跨越多台机器和连接它们的网络的系统大大增加了运行速度慢和不确定性的机会。我们通常将大型测试留给完整系统的端到端测试，这些测试更多的是验证配置，而不是代码片段，以及不可能使用测试双副本的遗留组件的测试。我们将在第14章中更多地讨论大型测试的用例。谷歌的团队经常将大型测试与小型或中型测试隔离开来，只在构建和发布过程中运行它们，以避免影响开发人员的工作流程。
+与前面一样，灵活性的提高伴随着风险的增加。与在一台机器上运行相比，必须处理一个跨越多台机器和连接它们的网络的系统大大增加了运行速度慢和不确定性的机会。我们通常将大型测试留给完整系统的端到端测试，这些测试更多的是验证配置，而不是代码片段，以及不可能使用测试双副本的遗留组件的测试。我们将在第14章中更多地讨论大型测试的用例。Google的团队经常将大型测试与小型或中型测试隔离开来，只在构建和发布过程中运行它们，以避免影响开发人员的工作流程。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 A better way to approach the quality of your test suite is to think about the behaviors that are tested. Do you have confidence that everything your customers expect to work will work? Do you feel confident you can catch breaking changes in your dependencies? Are your tests stable and reliable? Questions like these are a more holistic way to think about a test suite. Every product and team is going to be different; some will have difficult-to-test interactions with hardware, some involve massive datasets. Trying to answer the question “do we have enough tests?” with a single number ignores a lot of context and is unlikely to be useful. Code coverage can provide some insight into untested code, but it is not a substitute for thinking critically about how well your system is tested.
@@ -360,7 +360,7 @@ In some cases, you can limit the impact of flaky tests by automatically rerunnin
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 If test flakiness continues to grow, you will experience something much worse than lost productivity: a loss of confidence in the tests. It doesn’t take needing to investigate many flakes before a team loses trust in the test suite. After that happens, engineers will stop reacting to test failures, eliminating any value the test suite provided. Our experience suggests that as you approach 1% flakiness, the tests begin to lose value. At Google, our flaky rate hovers around 0.15%, which implies thousands of flakes every day. We fight hard to keep flakes in check, including actively investing engineering hours to fix them.
 </div></details>
-如果测试不稳定持续增长，您将经历比丧失生产力更糟糕的事情:对测试失去信心。在团队失去对测试套件的信任之前，不需要研究很多薄片。在此之后，工程师将停止对测试失败作出反应，从而消除测试套件所提供的任何价值。我们的经验表明，当您接近1%的不稳定时，测试开始失去价值。在谷歌时，我们的薄片率在0.15%左右，这意味着每天会有数千片薄片。我们努力控制雪花，包括积极投入工程时间来修复它们。
+如果测试不稳定持续增长，您将经历比丧失生产力更糟糕的事情:对测试失去信心。在团队失去对测试套件的信任之前，不需要研究很多薄片。在此之后，工程师将停止对测试失败作出反应，从而消除测试套件所提供的任何价值。我们的经验表明，当您接近1%的不稳定时，测试开始失去价值。在Google时，我们的薄片率在0.15%左右，这意味着每天会有数千片薄片。我们努力控制雪花，包括积极投入工程时间来修复它们。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 In most cases, flakes appear because of nondeterministic behavior in the tests themselves. Software provides many sources of nondeterminism: clock time, thread scheduling, network latency, and more. Learning how to isolate and stabilize the effects of randomness is not easy. Sometimes, effects are tied to low-level concerns like hardware interrupts or browser rendering engines. A good automated test infrastructure should help engineers identify and mitigate any nondeterministic behavior.
@@ -387,7 +387,7 @@ Test sizes in practice. Having precise definitions of test sizes has allowed us 
 
 请记住，只有当某些东西发生故障时，测试才会被重新访问。当你被要求修复一个你从未见过的坏测试时，你会感谢有人花时间让它变得容易理解。阅读代码的次数远远多于编写代码的次数，所以请确保编写的是您想要阅读的测试!
 
-**实际测试尺寸**。有了测试大小的精确定义，我们就可以创建工具来执行它们。强制使我们能够扩展我们的测试套件，并且仍然保证了速度、资源利用和稳定性。在谷歌中强制执行这些定义的程度因语言而异。例如，我们使用自定义安全管理器运行所有Java测试，如果标记为小的测试试图做一些被禁止的事情(比如建立网络连接)，就会导致所有测试失败。
+**实际测试尺寸**。有了测试大小的精确定义，我们就可以创建工具来执行它们。强制使我们能够扩展我们的测试套件，并且仍然保证了速度、资源利用和稳定性。在Google中强制执行这些定义的程度因语言而异。例如，我们使用自定义安全管理器运行所有Java测试，如果标记为小的测试试图做一些被禁止的事情(比如建立网络连接)，就会导致所有测试失败。
 
 ### 测试范围 The Scope
 
@@ -395,12 +395,12 @@ Test sizes in practice. Having precise definitions of test sizes has allowed us 
 Though we at Google put a lot of emphasis on test size, another important property to consider is test scope. Test scope refers to how much code is being validated by a given test. Narrow-scoped tests (commonly called “unit tests”) are designed to validate the logic in a small, focused part of the codebase, like an individual class or method. Medium-scoped tests (commonly called integration tests) are designed to verify interactions between a small number of components; for example, between a server and its database. Large-scoped tests (commonly referred to by names like functional tests, end-to-end tests, or system tests) are designed to validate the interaction of several distinct parts of the system, or emergent behaviors that aren’t expressed in a single class or method.
 </div></details>
 
-虽然我们在谷歌中非常强调测试大小，但另一个需要考虑的重要属性是测试范围。测试范围指的是给定的测试要验证多少代码。窄范围测试(通常称为“单元测试”)的设计目的是验证代码库中一小部分集中的逻辑，比如单个类或方法。中等范围的测试(通常称为集成测试)旨在验证少量组件之间的交互;例如，在服务器与其数据库之间。大范围测试(通常称为功能测试、端到端测试或系统测试)的设计是为了验证系统中几个不同部分的交互，或者不是在单个类或方法中表示的紧急行为。
+虽然我们在Google中非常强调测试大小，但另一个需要考虑的重要属性是测试范围。测试范围指的是给定的测试要验证多少代码。窄范围测试(通常称为“单元测试”)的设计目的是验证代码库中一小部分集中的逻辑，比如单个类或方法。中等范围的测试(通常称为集成测试)旨在验证少量组件之间的交互;例如，在服务器与其数据库之间。大范围测试(通常称为功能测试、端到端测试或系统测试)的设计是为了验证系统中几个不同部分的交互，或者不是在单个类或方法中表示的紧急行为。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 It’s important to note that when we talk about unit tests as being narrowly scoped, we’re referring to the code that is being validated, not the code that is being executed. It’s quite common for a class to have many dependencies or other classes it refers to, and these dependencies will naturally be invoked while testing the target class. Though some other testing strategies make heavy use of test doubles (fakes or mocks) to avoid executing code outside of the system under test, at Google, we prefer to keep the real dependencies in place when it is feasible to do so. Chapter 13 discusses this issue in more detail.
 </div></details>
-值得注意的是，当我们谈到单元测试的范围很窄时，我们指的是正在验证的代码，而不是正在执行的代码。类有许多依赖项或它引用的其他类是很常见的，这些依赖项在测试目标类时自然会被调用。尽管其他一些测试策略大量使用测试双倍(假冒或模拟)来避免在测试系统之外执行代码，但在谷歌中，我们倾向于在可行的情况下保留真正的依赖项。第13章更详细地讨论了这个问题。
+值得注意的是，当我们谈到单元测试的范围很窄时，我们指的是正在验证的代码，而不是正在执行的代码。类有许多依赖项或它引用的其他类是很常见的，这些依赖项在测试目标类时自然会被调用。尽管其他一些测试策略大量使用测试双倍(假冒或模拟)来避免在测试系统之外执行代码，但在Google中，我们倾向于在可行的情况下保留真正的依赖项。第13章更详细地讨论了这个问题。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Narrow-scoped tests tend to be small, and broad-scoped tests tend to be medium or large, but this isn’t always the case. For example, it’s possible to write a broad-scoped test of a server endpoint that covers all of its normal parsing, request validation, and business logic, which is nevertheless small because it uses doubles to stand in for all out-of-process dependencies like a database or filesystem. Similarly, it’s possible to write a narrow-scoped test of a single method that must be medium sized. For example, modern web frameworks often bundle HTML and JavaScript together, and testing a UI component like a date picker often requires running an entire browser, even to validate a single code path.
@@ -410,7 +410,7 @@ Narrow-scoped tests tend to be small, and broad-scoped tests tend to be medium o
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Just as we encourage tests of smaller size, at Google, we also encourage engineers to write tests of narrower scope. As a very rough guideline, we tend to aim to have a mix of around 80% of our tests being narrow-scoped unit tests that validate the majority of our business logic; 15% medium-scoped integration tests that validate the interactions between two or more components; and 5% end-to-end tests that validate the entire system. Figure 11-3 depicts how we can visualize this as a pyramid.
 </div></details>
-正如我们鼓励更小规模的测试一样，在谷歌，我们也鼓励工程师编写更小范围的测试。作为一个非常粗略的指导方针，我们倾向于将80%的测试混合为窄范围的单元测试，以验证我们的大部分业务逻辑;15%中等范围的集成测试，验证两个或多个组件之间的交互;5%的端到端测试验证整个系统。图11-3描述了我们如何将其可视化为一个金字塔。[^6]
+正如我们鼓励更小规模的测试一样，在Google，我们也鼓励工程师编写更小范围的测试。作为一个非常粗略的指导方针，我们倾向于将80%的测试混合为窄范围的单元测试，以验证我们的大部分业务逻辑;15%中等范围的集成测试，验证两个或多个组件之间的交互;5%的端到端测试验证整个系统。图11-3描述了我们如何将其可视化为一个金字塔。[^6]
 
 <img src='./pic/fingure-11.3.png' width='100%'> [^6]
 
@@ -631,7 +631,7 @@ Initially, the larger and more complex parts of our codebase appeared resistant 
 The program was organized into five levels, and each level required some concrete actions to improve the test hygiene on the team. The levels were designed in such a way that each step up could be accomplished within a quarter, which made it a convenient fit for Google’s internal planning cadence.
 </div></details>
 
-该计划被组织成五个级别，每个级别需要一些具体的行动来改善团队中的测试卫生。这些关卡的设计是这样的，每个步骤都可以在一个季度内完成，这使得它非常适合谷歌的内部规划节奏。
+该计划被组织成五个级别，每个级别需要一些具体的行动来改善团队中的测试卫生。这些关卡的设计是这样的，每个步骤都可以在一个季度内完成，这使得它非常适合Google的内部规划节奏。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Test Certified Level 1 covered the basics: set up a continuous build; start tracking code coverage; classify all your tests as small, medium, or large; identify (but don’t necessarily fix) flaky tests; and create a set of fast (not necessarily comprehensive) tests that can be run quickly. Each subsequent level added more challenges like “no releases with broken tests” or “remove all nondeterministic tests.” By Level 5, all tests were automated, fast tests were running before every commit, all nondeterminism had been removed, and every behavior was covered. An internal dashboard applied social pressure by showing the level of every team. It wasn’t long before teams were competing with one another to climb the ladder.
@@ -665,7 +665,7 @@ In April 2006, a short writeup covering how to improve testing in Python appeare
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Ultimately, the uproar subsided and TotT quickly became a staple of Google culture. To date, engineers from across the company have produced several hundred episodes, covering almost every aspect of testing imaginable (in addition to a variety of other technical topics). New episodes are eagerly anticipated and some engineers even volunteer to post the episodes around their own buildings. We intentionally limit each episode to exactly one page, challenging authors to focus on the most important and actionable advice. A good episode contains something an engineer can take back to the desk immediately and try.
 </div></details>
-最终，骚动平息了，TotT 迅速成为谷歌文化的主要内容。迄今为止，整个公司的工程师已经制作了数百集，几乎涵盖了可以想象的测试的各个方面（除了各种其他技术主题）。新剧集备受期待，一些工程师甚至自愿在他们自己的建筑物周围发布剧集。我们有意将每一集限制在一页，挑战作者专注于最重要和可操作的建议。一个好的情节包含工程师可以立即带回办公桌并尝试的东西。
+最终，骚动平息了，TotT 迅速成为Google文化的主要内容。迄今为止，整个公司的工程师已经制作了数百集，几乎涵盖了可以想象的测试的各个方面（除了各种其他技术主题）。新剧集备受期待，一些工程师甚至自愿在他们自己的建筑物周围发布剧集。我们有意将每一集限制在一页，挑战作者专注于最重要和可操作的建议。一个好的情节包含工程师可以立即带回办公桌并尝试的东西。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Ironically for a publication that appears in one of the more private locations, TotT has had an outsized public impact. Most external visitors see an episode at some point in their visit, and such encounters often lead to funny conversations about how Googlers always seem to be thinking about code. Additionally, TotT episodes make great blog posts, something the original TotT authors recognized early on. They began publishing lightly edited versions publicly, helping to share our experience with the industry at large.
@@ -707,7 +707,7 @@ Why didn’t we start by mandating the writing of tests?
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 The Testing Grouplet had considered asking for a testing mandate from senior leadership but quickly decided against it. Any mandate on how to develop code would be seriously counter to Google culture and likely slow the progress, independent of the idea being mandated. The belief was that successful ideas would spread, so the focus became demonstrating success.
 </div></details>
-测试小组曾考虑向高层领导提出测试任务，但很快就决定不这样做。任何关于如何开发代码的授权都将严重违背谷歌文化，并且可能会减缓进度，与授权的想法无关。人们相信成功的想法会传播开来，因此重点变成了展示成功。
+测试小组曾考虑向高层领导提出测试任务，但很快就决定不这样做。任何关于如何开发代码的授权都将严重违背Google文化，并且可能会减缓进度，与授权的想法无关。人们相信成功的想法会传播开来，因此重点变成了展示成功。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 If engineers were deciding to write tests on their own, it meant that they had fully accepted the idea and were likely to keep doing the right thing—even if no one was compelling them to.
@@ -725,7 +725,7 @@ Automated testing is not suitable for all testing tasks. For example, testing th
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 In addition to qualitative judgements, there are certain creative assessments at which humans excel. For example, searching for complex security vulnerabilities is something that humans do better than automated systems. After a human has discovered and understood a flaw, it can be added to an automated security testing system like Google’s Cloud Security Scanner where it can be run continuously and at scale.
 </div></details>
-除了定性判断之外，人类还擅长某些创造性的评估。例如，搜索复杂的安全漏洞是人类比自动化系统做得更好的事情。当人们发现并理解了一个缺陷后，就可以将其添加到自动安全测试系统中，比如谷歌的云安全扫描仪(Cloud security Scanner)，该系统可以连续且大规模地运行。
+除了定性判断之外，人类还擅长某些创造性的评估。例如，搜索复杂的安全漏洞是人类比自动化系统做得更好的事情。当人们发现并理解了一个缺陷后，就可以将其添加到自动安全测试系统中，比如Google的云安全扫描仪(Cloud security Scanner)，该系统可以连续且大规模地运行。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 A more generalized term for this technique is Exploratory Testing. Exploratory Testing is a fundamentally creative endeavor in which someone treats the application under test as a puzzle to be broken, maybe by executing an unexpected set of steps or by inserting unexpected data. When conducting an exploratory test, the specific problems to be found are unknown at the start. They are gradually uncovered by probing commonly overlooked code paths or unusual responses from the application. As with the detection of security vulnerabilities, as soon as an exploratory test discovers an issue, an automated test should be added to prevent future regressions.
@@ -745,14 +745,14 @@ Using automated testing to cover well-understood behaviors enables the expensive
 The adoption of developer-driven automated testing has been one of the most transformational software engineering practices at Google. It has enabled us to build larger systems with larger teams, faster than we ever thought possible. It has helped us keep up with the increasing pace of technological change. Over the past 15 years, we have successfully transformed our engineering culture to elevate testing into a cultural norm. Despite the company growing by a factor of almost 100 times since the journey began, our commitment to quality and testing is stronger today than it has ever been.
 </div></details>
 
-采用开发人员驱动的自动化测试已经成为谷歌最具变革性的软件工程实践之一。它使我们能够用更大的团队构建更大的系统，速度比我们想象的要快。它帮助我们跟上技术变革的步伐。在过去的15年里，我们已经成功地将我们的工程文化转变为一种文化规范来提升测试。尽管公司自成立以来增长了近100倍，但我们对质量和测试的承诺比以往任何时候都更加坚定。
+采用开发人员驱动的自动化测试已经成为Google最具变革性的软件工程实践之一。它使我们能够用更大的团队构建更大的系统，速度比我们想象的要快。它帮助我们跟上技术变革的步伐。在过去的15年里，我们已经成功地将我们的工程文化转变为一种文化规范来提升测试。尽管公司自成立以来增长了近100倍，但我们对质量和测试的承诺比以往任何时候都更加坚定。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 This chapter has been written to help orient you to how Google thinks about testing. In the next few chapters, we are going to dive even deeper into some key topics that have helped shape our understanding of what it means to write good, stable, and reliable tests. We will discuss the what, why, and how of unit tests, the most common kind of test at Google. We will wade into the debate on how to effectively use test doubles in tests through techniques such as faking, stubbing, and interaction testing. Finally, we will discuss the challenges with testing larger and more complex systems, like many of those we have at Google.
 
 </div></details>
 
-本章的目的是帮助您了解谷歌如何看待测试。在接下来的几章中，我们将更深入地探讨一些关键的主题，这些主题帮助我们理解编写好的、稳定的和可靠的测试意味着什么。我们将讨论单元测试的内容、原因和方法，单元测试是谷歌中最常见的测试类型。我们将深入讨论如何通过诸如伪造、存根和交互测试等技术有效地在测试中使用测试替身。最后，我们将讨论测试更大、更复杂的系统所面临的挑战，就像我们在谷歌所遇到的许多系统一样。
+本章的目的是帮助您了解Google如何看待测试。在接下来的几章中，我们将更深入地探讨一些关键的主题，这些主题帮助我们理解编写好的、稳定的和可靠的测试意味着什么。我们将讨论单元测试的内容、原因和方法，单元测试是Google中最常见的测试类型。我们将深入讨论如何通过诸如伪造、存根和交互测试等技术有效地在测试中使用测试替身。最后，我们将讨论测试更大、更复杂的系统所面临的挑战，就像我们在Google所遇到的许多系统一样。
 
 <details> <summary>origin</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 At the conclusion of these three chapters, you should have a much deeper and clearer picture of the testing strategies we use and, more important, why we use them.
