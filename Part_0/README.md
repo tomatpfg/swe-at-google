@@ -4,7 +4,7 @@
 
 下面是关于本项目的介绍
 
-###一、目录
+### 一、目录
 ```bash
 ├── Part_0
 │   └── figures    // 图例目录
@@ -31,7 +31,7 @@
 因为Markdown文件过大某些情况下会有卡死情况，再一个为了方便协作，所以每章又拆分成了不同的章节文件，但是没必要再拆分下去了。后面的部分和章节拆解参考第一章即可。
 
 
-###二、添加章节到目录
+### 二、添加章节到目录
 
 章节文件创建后即可在根目录SUMMARY.md文件创建关联。
 ```
@@ -45,7 +45,7 @@
     * [TL;DRs](Part_I_Thesis/What_Is_Software_Engineering/TL_DRs.md)
 ```
 
-###三、完成章节内容
+### 三、完成章节内容
 通常我们每个章节包含几个部分：
 * 英文原文
 * 中文译文
@@ -54,15 +54,15 @@
 * 有疑问的部分
 
 我们约定如下：
-####1. 英文原文
+#### 1. 英文原文
 ```
 <details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 This is an apple.
 </div></details>
 ```
-####2. 中文译文
+#### 2. 中文译文
 走正常Markdown语法即可
-####3. 图例
+#### 3. 图例
 图例命名规则为:
 ```
 Part_{部分号}_Chapter_{章节号}_figure_{图顺序号}.png
@@ -71,7 +71,7 @@ Part_{部分号}_Chapter_{章节号}_figure_{图顺序号}.png
 ```
 ![avatar](figures/Part_0_figure_1.png)
 ```
-####4.注解
+#### 4.注解
 通常比较好的注解方式如下：
 ```
 它们可能会造成大量金钱损失、财产损失，或者最糟糕的是，造成生命损失。[^2]
@@ -84,7 +84,7 @@ Part_{部分号}_Chapter_{章节号}_figure_{图顺序号}.png
 ```
 它们可能会造成大量金钱损失、财产损失，或者最糟糕的是，造成生命损失。[^2]（<mark style="color:orange;">See “[Failure at Dhahran](https://oreil.ly/lhO7Z).</mark>）
 ```
-####5.有疑问的部分
+#### 5.有疑问的部分
 在翻译的过程中，难免遇到翻译之后还无法理解的语句，针对这样的句子，建议加颜色来做出提示。
 ```
 <mark style="color:red;">通常，该频谱短端的代码不受时间影响</mark>
