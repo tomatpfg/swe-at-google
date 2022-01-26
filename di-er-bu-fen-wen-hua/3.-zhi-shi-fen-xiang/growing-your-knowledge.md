@@ -1,2 +1,0 @@
-# Growing Your Knowledge
-

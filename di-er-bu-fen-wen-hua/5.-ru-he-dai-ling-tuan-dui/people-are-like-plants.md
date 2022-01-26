@@ -1,2 +1,0 @@
-# People Are Like Plants
-
