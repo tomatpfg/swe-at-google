@@ -1,6 +1,7 @@
 # Table of contents
 
 * [谷歌的软件工程](README.md)
+* [如何参与本书编写](Part_0/README.md)
 * [前言](foreword.md)
 * [第一部分 论题](Part_I_Thesis/README.md)
   * [1. 什么是软件工程？](Part_I_Thesis/What_Is_Software_Engineering/README.md)
