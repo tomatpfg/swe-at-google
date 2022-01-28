@@ -20,7 +20,7 @@
     * [Conclusion](Part_II_Culture/How_to_Work_Well_on_Teams/conclusion.md)
     * [TL;DRs](Part_II_Culture/How_to_Work_Well_on_Teams/tl-drs.md)
   * [3. 知识分享](Part_II_Culture/Knowledge_Sharing/README.md)
-    * [Challenges to Learning](Part_II_Culture/Knowledge_Sharing/challenges-to-learning.md)
+    * [学习面临的挑战](Part_II_Culture/Knowledge_Sharing/challenges-to-learning.md)
     * [Philosophy](Part_II_Culture/Knowledge_Sharing/philosophy.md)
     * [Setting the Stage: Psychological Safety](Part_II_Culture/Knowledge_Sharing/setting-the-stage-psychological-safety.md)
     * [Growing Your Knowledge](Part_II_Culture/Knowledge_Sharing/growing-your-knowledge.md)
