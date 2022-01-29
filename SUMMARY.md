@@ -22,7 +22,7 @@
   * [3. 知识分享](Part_II_Culture/Knowledge_Sharing/README.md)
     * [学习面临的挑战](Part_II_Culture/Knowledge_Sharing/challenges-to-learning.md)
     * [哲学](Part_II_Culture/Knowledge_Sharing/philosophy.md)
-    * [Setting the Stage: Psychological Safety](Part_II_Culture/Knowledge_Sharing/setting-the-stage-psychological-safety.md)
+    * [准备阶段：心理安全](Part_II_Culture/Knowledge_Sharing/setting-the-stage-psychological-safety.md)
     * [Growing Your Knowledge](Part_II_Culture/Knowledge_Sharing/growing-your-knowledge.md)
     * [Scaling Your Questions: Ask the Community](Part_II_Culture/Knowledge_Sharing/scaling-your-questions-ask-the-community.md)
     * [Scaling Your Knowledge: You Always Have Something to Teach](Part_II_Culture/Knowledge_Sharing/scaling-your-knowledge-you-always-have-something-to-teach.md)
