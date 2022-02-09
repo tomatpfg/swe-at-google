@@ -33,7 +33,7 @@ Google 拥有强大的内部和外部<sup id="a1">[5](#f1)</sup>
 在本节中，我们专注于发现贡献和创建正式文档的机会，从修复错字等小事到记录部落知识等更大的工作。
 
 
-![bird](https://github.com/nickcwhT/swe-at-google/blob/main/Part_III_Processes/pic/bird.png) 关于对这些问题的较全面的讨论，见第10章
+![avatar](icon/bird.png) 关于对这些问题的较全面的讨论，见第10章
   
   
 #### 更新文档
