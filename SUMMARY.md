@@ -25,7 +25,7 @@
     * [准备阶段：心理安全](Part_II_Culture/Knowledge_Sharing/setting-the-stage-psychological-safety.md)
     * [Growing Your Knowledge](Part_II_Culture/Knowledge_Sharing/growing-your-knowledge.md)
     * [Scaling Your Questions: Ask the Community](Part_II_Culture/Knowledge_Sharing/scaling-your-questions-ask-the-community.md)
-    * [Scaling Your Knowledge: You Always Have Something to Teach](Part_II_Culture/Knowledge_Sharing/scaling-your-knowledge-you-always-have-something-to-teach.md)
+    * [梳理你的知识: 总会找到一些可以教的东西](Part_II_Culture/Knowledge_Sharing/scaling-your-knowledge-you-always-have-something-to-teach.md)
     * [Scaling Your Organization's Knowledge](Part_II_Culture/Knowledge_Sharing/scaling-your-organizations-knowledge.md)
     * [Readability: Standardized Mentorship Through Code Review](Part_II_Culture/Knowledge_Sharing/readability-standardized-mentorship-through-code-review.md)
     * [Conclusion](Part_II_Culture/Knowledge_Sharing/conclusion.md)
