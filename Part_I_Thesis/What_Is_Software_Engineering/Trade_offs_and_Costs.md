@@ -56,20 +56,55 @@
 
 ### 示例：在时间和规模之间做出决定
 
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+Much of the time, our major themes of time and scale overlap and work in conjunction. A policy like the Beyoncé Rule scales well and helps us maintain things over time. A change to an OS interface might require many small refactorings to adapt to,but most of those changes will scale well because they are of a similar form: the OS change doesn’t manifest differently for every caller and every project.
+</div></details>
+
 很多时候，我们的时间和规模的主要主题重叠并协同工作。像碧昂斯规则这样的政策可以很好地扩展并帮助我们随着时间的推移维护事物。对操作系统接口的更改可能需要进行许多小的重构才能适应，但大多数更改都可以很好地扩展，因为它们具有相似的形式：操作系统更改不会对每个调用者和每个项目都有不同的表现。&#x20;
+
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+Occasionally time and scale come into conflict, and nowhere so clearly as in the basic question: should we add a dependency or fork/reimplement it to better suit our local needs?
+</div></details>
 
 有时时间和规模会发生冲突，没有比基本问题更清楚的地方了：我们应该添加依赖项还是分叉/重新实现它以更好地满足我们自身的需求？&#x20;
 
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+This question can arise at many levels of the software stack because it is regularly the case that a bespoke solution customized for your narrow problem space may outperform the general utility solution that needs to handle all possibilities. By forking or reimplementing utility code and customizing it for your narrow domain, you can add new features with greater ease, or optimize with greater certainty, regardless of whether we are talking about a microservice, an in-memory cache, a compression routine, or anything else in our software ecosystem. Perhaps more important, the control you gain from such a fork isolates you from changes in your underlying dependencies: those changes aren’t dictated by another team or third-party provider.You are in control of how and when to react to the passage of time and necessity to change.
+</div></details>
+
 这个问题可能出现在软件堆栈的许多级别，因为通常情况下，为小的空间问题定制的解决方案可能优于需要处理所有可能性的通用解决方案。通过分叉或重新实现实用程序代码并针对小的领域进行自定义，可以更轻松地添加新功能或更好地优化，无论我们是在谈论微服务、内存缓存、压缩程序还是我们软件生态系统中的其他任何东西。也许更重要的是，您从这种分叉中获得的控制权将您与底层依赖项的更改隔离开来：这些更改不是由另一个团队或第三方提供商决定的。您可以控制如何以及何时对时间的流逝和改变的必要性做出反应。&#x20;
 
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+On the other hand, if every developer forks everything used in their software project instead of reusing what exists, scalability suffers alongside sustainability. Reacting to a security issue in an underlying library is no longer a matter of updating a single dependency and its users: it is now a matter of identifying every vulnerable fork of that dependency and the users of those forks.
+</div></details>
+
 另一方面，如果每个开发人员都分叉项目中使用的所有内容而不是重用现有的内容，那么可扩展性就会受到可持续性的影响。对底层库中的安全问题做出反应不再是更新单个依赖项及其用户的问题：现在是识别该依赖项的每个易受攻击的分支以及这些分支用户的问题。&#x20;
+
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+As with most software engineering decisions, there isn’t a one-size-fits-all answer to this situation. If your project life span is short, forks are less risky. If the fork in question is provably limited in scope, that helps, as well—avoid forks for interfaces that
+could operate across time or project-time boundaries (data structures, serialization formats, networking protocols). Consistency has great value, but generality comes with its own costs, and you can often win by doing your own thing—if you do it carefully.
+</div></details>
 
 与大多数软件工程决策一样，对于这种情况没有一刀切的答案。如果您的项目生命周期较短，那么分叉的风险较小。如果问题分支可以证明范围有限，那么这也有助于避免分叉可以跨时间或项目时间边界（数据结构、序列化格式、网络协议）操作的接口。一致性具有很大的价值，但通用性也有其自身的成本，如果您谨慎行事，您通常可以通过做自己的事情来获胜。
 
 ### 重新审视决策，犯错
 
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+One of the unsung benefits of committing to a data-driven culture is the combined ability and necessity of admitting to mistakes. A decision will be made at some point,based on the available data—hopefully based on good data and only a few assumptions, but implicitly based on currently available data. As new data comes in, contexts change, or assumptions are dispelled, it might become clear that a decision was in
+error or that it made sense at the time but no longer does. This is particularly critical for a long-lived organization: time doesn’t only trigger changes in technical dependencies and software systems, but in data used to drive decisions.
+</div></details>
+
 致力于数据驱动文化的一项隐藏好处是承认错误的综合能力和必要性。将在某个时候根据可用数据做出决定——希望基于良好的数据和一些假设，但隐含地基于当前可用的数据。随着新数据的出现、上下文的变化或假设的消除，可能会清楚地表明某个决策是错误的，或者它在当时有意义但不再有意义。这对于一个长期存在的组织来说尤其重要：时间不仅会引发技术依赖和软件系统的变化，还会引发用于驱动决策的数据的变化。&#x20;
+
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+We believe strongly in data informing decisions, but we recognize that the data will change over time, and new data may present itself. This means, inherently, that decisions will need to be revisited from time to time over the life span of the system in question. For long-lived projects, it’s often critical to have the ability to change directions after an initial decision is made. And, importantly, it means that the deciders
+need to have the right to admit mistakes. Contrary to some people’s instincts, leaders who admit mistakes are more respected, not less.
+</div></details>
 
 我们坚信数据为决策提供依据，但我们认识到数据会随着时间的推移而发生变化，并且可能会出现新的数据。这本质上意味着，需要在相关系统的整个生命周期内不时重新审视决策。对于长期项目，在做出初步决定后能够改变方向通常是至关重要的。而且，重要的是，这意味着决策者需要有权承认错误。与某些人的直觉相反，承认错误的领导者更受尊重，而不是更少。&#x20;
 
-以证据为导向，但也要意识到无法衡量的事物可能仍然有价值。如果您是领导者，这就是您被要求做的事情：运用判断力，断言事情很重要。我们将在第 5 章和第 6 章中更多地讨论领导力。
+<details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
+Be evidence driven, but also realize that things that can’t be measured may still have value. If you’re a leader, that’s what you’ve been asked to do: exercise judgement,assert that things are important. We’ll speak more on leadership in Chapters 5 and 6.
+</div></details>
+
+以证据为导向，但也要意识到无法衡量的事物可能仍然有价值。如果您是领导者，这就是您被要求做的事情：运用判断力，断言事情很重要。我们将在第 <mark style="color:red">5</mark> 章和第 <mark style="color:red;">6</mark> 章中更多地讨论领导力。
