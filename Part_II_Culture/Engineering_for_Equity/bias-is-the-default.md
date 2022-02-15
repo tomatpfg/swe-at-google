@@ -3,12 +3,21 @@
 <details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 When engineers do not focus on users of different nationalities, ethnicities, races, genders, ages, socioeconomic statuses, abilities, and belief systems, even the most talented staff will inadvertently fail their users. Such failures are often unintentional; all people have certain biases, and social scientists have recognized over the past several decades that most people exhibit unconscious bias, enforcing and promulgating exist‐ ing stereotypes. Unconscious bias is insidious and often more difficult to mitigate than intentional acts of exclusion. Even when we want to do the right thing, we might not recognize our own biases. By the same token, our organizations must also recognize that such bias exists and work to address it in their workforces, product development, and user outreach.
 </div></details>
-由于偏见，谷歌有时未能在其产品中公平地代表用户，过去几年的发布并没有充分关注代表性不足的群体。 许多用户将我们在这些情况下缺乏意识归因于我们的工程人口主要是男性，主要是白人或亚洲人，当然不能代表使用我们产品的所有社区。 在我们的员工队伍中缺乏此类用户的代表性[^1]意味着我们通常没有必要的多样性来了解我们产品的使用如何影响代表性不足或易受伤害的用户。
+由于偏见，谷歌有时未能在其产品中公平地代表用户，过去几年的发布并没有充分关注代表性不足的群体。 许多用户将我们在这些情况下缺乏意识归因于我们的工程人口主要是男性，主要是白人或亚洲人，当然不能代表使用我们产品的所有社区。 在我们的员工队伍中缺乏此类用户的代表性[^1]（<mark style="color:orange;">Google’s 2019 Diversity Report.</mark>）意味着我们通常没有必要的多样性来了解我们产品的使用如何影响代表性不足或易受伤害的用户。
 <details> <summary>英文原文</summary><div style="border:1px solid #eee;padding:5px;background-color:#F2F2F2">
 Because of bias, Google has at times failed to represent users equitably within their products, with launches over the past several years that did not focus enough on underrepresented groups. Many users attribute our lack of awareness in these cases to the fact that our engineering population is mostly male, mostly White or Asian, and certainly not representative of all the communities that use our products. The lack of representation of such users in our workforce[^1] means that we often do not have the requisite diversity to understand how the use of our products can affect underrepresented or vulnerable users.
 </div></details>
-<details>
+## 案例研究：谷歌在种族包容方面未达标
+2015 年，软件工程师 Jacky Alciné 指出[^2]（<mark style="color:orange;">@jackyalcine. 2015. “Google Photos, Y’all Fucked up. My Friend’s Not a Gorilla.” Twitter, June 29, 2015.
+https://twitter.com/jackyalcine/status/615329515909156865.</mark>）谷歌相册中的图像识别算法将他的黑人朋友归类为“大猩猩”。 谷歌对这些错误的反应很慢，而且在解决这些错误方面也不完整。
+是什么导致了如此巨大的失败？ 几件事：
+* 图像识别算法依赖于提供一个“适当的”（通常意味着“完整的”）数据集。 输入谷歌图像识别算法的照片数据显然不完整。 简而言之，数据并不代表人口。
+* 谷歌本身（以及整个科技行业）没有（也没有）有太多的黑色表示，[^3]（<mark style="color:orange;">Many reports in 2018–2019 pointed to a lack of diversity across tech. Some notables include the National
+Center for Women & Information Technology, and Diversity in Tech.</mark>）并且这会影响此类算法设计和此类数据集收集中的主观决策。 组织本身的无意识偏见可能导致更具代表性的产品被搁置在桌面上。
+* 谷歌的图像识别目标市场没有充分包括这些代表性不足的群体。 谷歌的测试没有发现这些错误； 结果，我们的用户这样做了，这既让 Google 感到尴尬，也伤害了我们的用户。
 
+直到 2018 年，谷歌仍未充分解决根本问题。[^4]（<mark style="color:orange;">Tom Simonite, “When It Comes to Gorillas, Google Photos Remains Blind,” Wired, January 11, 2018.</mark>）
+<details>
 <summary>Case Study: Google Misses the Mark on Racial Inclusion</summary>
 
 In 2015, software engineer Jacky Alciné pointed out\[^2] that the image recognition algorithms in Google Photos were classifying his black friends as “gorillas.” Google was slow to respond to these mistakes and incomplete in addressing them.
