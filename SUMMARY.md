@@ -72,7 +72,7 @@
   * [8. 风格指南和规则](Part_III_Processes/Chapter-8.md)
   * [9. 代码审查](Part_III_Processes/Chapter-9.md)
   * [10. 文档](Part_III_Processes/Chapter-10.md)
-  * [11. 测试 Testing overview](Part_III_Processes/Chapter-11-0.md)
+  * [11. 测试概述 Testing overview](Part_III_Processes/Chapter-11-0.md)
     * [为什么我们需要编写测试](Part_III_Processes/Chapter-11-1-why.md)
     * [设计测试套件 Designing a Test Suite](Part_III_Processes/Chapter-11-2-designing.md)
     * [Google规模级别的测试 Testing at Google Scale](Part_III_Processes/Chapter-11-3-testing.md)
@@ -80,5 +80,14 @@
     * [自动化测试的局限](Part_III_Processes/Chapter-11-5-limit.md)
     * [总结](Part_III_Processes/Chapter-11-5-limit.md)
     * [其他](Part_III_Processes/Chapter-11-5-limit.md)
+
+
+  * [12. 单元测试 Unit Testing](Part_III_Processes/Chapter-12-0.md)
+    * [可维护的重要性 The Importance of Maintainability](Part_III_Processes/Chapter-12-1-importance.md)
+    * [防止脆性测试 Preventing Brittle Tests](Part_III_Processes/Chapter-12-2-preventing.md)
+    * [编写清晰的测试 Writing Clear Tests](Part_III_Processes/Chapter-12-3-writing.md)
+    * [测试和代码共享:DAMP，而不是 DRY Tests and Code Sharing: DAMP, Not DRY](Part_III_Processes/Chapter-12-4-sharing.md)
+    * [总结](Part_III_Processes/Chapter-12-5-conclusion.md)
+    * [其他](Part_III_Processes/Chapter-12-5-conclusion.md)
 * [第四部分](di-si-bu-fen.md)
 * [第五部分](di-wu-bu-fen.md)

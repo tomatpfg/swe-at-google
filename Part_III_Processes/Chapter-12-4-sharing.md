@@ -1,4 +1,4 @@
-## 测试和代码共享:DAMP，而不是DRY Tests and Code Sharing: DAMP, Not DRY
+## 测试和代码共享:DAMP，而不是 DRY Tests and Code Sharing: DAMP, Not DRY
 <details> <summary>origin</summary><div style='border:1px solid #eee;padding:5px;background-color:#F2F2F2'>
 One final aspect of writing clear tests and avoiding brittleness has to do with code sharing. Most software attempts to achieve a principle called DRY—“Don’t Repeat Yourself.” DRY states that software is easier to maintain if every concept is canonically represented in one place and code duplication is kept to a minimum. This approach is especially valuable in making changes easier because an engineer needs to update only one piece of code rather than tracking down multiple references. The downside to such consolidation is that it can make code unclear, requiring readers to follow chains of references to understand what the code is doing.
 
