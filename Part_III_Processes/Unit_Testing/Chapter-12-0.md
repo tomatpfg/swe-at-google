@@ -3,7 +3,7 @@
 -- -
 **<p align="right">单元测试 Unit Testing</p>**
 
-*<p align="right">作者：  Erik Kueer</p>*
+*<p align="right">作者：  Erik Kuefler</p>*
 *<p align="right">编辑： Tom Manshreck</p>*
 
 
