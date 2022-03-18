@@ -1,2 +1,0 @@
-# Reject Singular Approaches
-

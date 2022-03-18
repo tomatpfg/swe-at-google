@@ -1,2 +1,0 @@
-# Stay Curious, Push Forward
-

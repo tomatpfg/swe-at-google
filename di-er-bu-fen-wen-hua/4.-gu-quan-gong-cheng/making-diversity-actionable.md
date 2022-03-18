@@ -1,2 +1,0 @@
-# Making Diversity Actionable
-

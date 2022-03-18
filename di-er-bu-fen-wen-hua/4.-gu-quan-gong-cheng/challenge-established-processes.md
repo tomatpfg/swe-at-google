@@ -1,2 +1,0 @@
-# Challenge Established Processes
-
