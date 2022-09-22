@@ -109,7 +109,8 @@ Now that we understand our goal, let’s look at some practices for making sure 
 Consider Example 12-1, which validates a transaction and saves it to a database
 </div></details>
 考虑示例12-1，它验证事务并将其保存到数据库
-```Java
+
+```java
 public void processTransaction(Transaction transaction) {
  if (isValid(transaction)) {
  saveToDatabase(transaction);
@@ -128,14 +129,17 @@ public void setAccountBalance(String accountName, int balance) {
 public void getAccountBalance(String accountName) {
  // Read transactions from the database to determine the account balance
 }
+
 A tempting way to test this code would be to remove the “private” visibility modifiers
 and test the implementation logic directly, as demonstrated in Example 12-2.
 Example 12-2. A naive test of a transaction API’s implementation
+
 @Test
 public void emptyAccountShouldNotBeValid() {
  assertThat(processor.isValid(newTransaction().setSender(EMPTY_ACCOUNT)))
  .isFalse();
 }
+
 @Test
 public void shouldSaveSerializedData() {
  processor.saveToDatabase(newTransaction()
@@ -271,6 +275,7 @@ Interaction tests tend to be more brittle than state tests for the same reason t
 Example 12-4. A brittle interaction test
 </div></details>
 例12-4 脆性相互作用试验
+
 ```java
 @Test
 public void shouldWriteToDatabase() {
@@ -297,7 +302,7 @@ Example 12-5. Testing against state
 - 如果被测试的系统被重构，调用一个稍微不同的API来写一个等价的记录，测试将会失败，即使我们希望它通过。
 
 例12-5. 测试相反的状态
-```Java
+```java
 @Test
 public void shouldCreateUsers() {
  accounts.createUser("foobar");
@@ -312,16 +317,16 @@ This test more accurately expresses what we care about: the state of the system 
 
 The most common reason for problematic interaction tests is an over reliance on mocking frameworks. These frameworks make it easy to create test doubles that record and verify every call made against them, and to use those doubles in place of real objects in tests. This strategy leads directly to brittle interaction tests, and so we tend to prefer the use of real objects in favor of mocked objects, as long as the real objects are fast and deterministic.
 
-<div> <image src='./pic/bird.png' width=60 style="float:left"/>
+<div> <image src='../pic/bird.png' width=60 style="float:left"/>
 For a more extensive discussion of test doubles and mocking frameworks, when they should be used, and safer alternatives, see  <a href='./Chapter-13-0.md'>Chapter 13.</a>
 </div>
 </div></details>
 这个测试更准确地表达了我们所关心的:与被测系统交互后的状态。
 
-有问题的交互测试最常见的原因是过度依赖mock框架。这些框架使得创建测试双精度对象变得很容易，该测试双精度对象记录和验证对它们进行的每个调用，并在测试中使用这些双精度对象代替实际对象。这种策略直接导致脆性交互测试，因此我们倾向于使用真实对象而不是模拟对象，只要真实对象速度快且具有确定性。
+有问题的交互测试最常见的原因是过度依赖mock框架。这些框架使得创建test double对象变得很容易，该测试test double记录和验证对它们进行的每个调用，并在测试中使用这些test double代替实际对象。这种策略直接导致脆性交互测试，因此我们倾向于使用真实对象而不是模拟对象，只要真实对象速度快且具有确定性。
 
-<div> <image src='./pic/bird.png' width=60 style="float:left"/>
-关于测试双功能和mock框架的更广泛讨论，以及它们应该在什么时候使用，以及更安全的替代方案，请参见 <a href='./Chapter-13-0.md'>第13章.</a>
+<div> <image src='../pic/bird.png' width=60 style="float:left"/>
+关于test double和mock框架的更广泛讨论，以及它们应该在什么时候使用，以及更安全的替代方案，请参见 <a href='./Chapter-13-0.md'>第13章.</a>
 </div>
 
 
